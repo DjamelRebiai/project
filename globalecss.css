@@ -1,0 +1,217 @@
+/* تنسيق عام */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(212, 218, 206);
+    display: flex;
+    flex-direction: row;
+}
+
+/* الشريط الجانبي */
+.bar1 {
+    width: 15%;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 10px 10px 10px 0px;
+}
+
+.bar1 nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bar1 nav ul li {
+    margin: 0px 0px 0px 10px;
+}
+
+.bar1 nav ul li a {
+    margin: 0px 0px 20px 0px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.bar1 nav ul li a:hover {
+    margin: 10px;
+    color: #6bd0e9;
+    background-color: #243336;
+    border-radius: 100px;
+}
+
+.bar1 nav ul li a i {
+    margin-right: 10px;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    width: 85%;
+    height: 100vh;
+    background-color: rgb(113, 116, 110);
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px 0px 0px;
+}
+
+/* الشريط العلوي */
+.bar {
+    width: 106%;
+    height: 10%;
+    background-color: rgb(212, 218, 206);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+/* المحتوى الرئيسي */
+.main {
+    width: 100%;
+    height: 80%;
+    background-color: rgb(212, 218, 206);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* التذييل */
+.footer {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(114, 25, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* تنسيق الأقسام */
+.section {
+    display: none; /* إخفاء جميع الأقسام افتراضيًا */
+}
+
+.section.active {
+    display: block; /* عرض القسم النشط فقط */
+}
+
+/*************************************************/
+
+/* تنسيق الكروت */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 كروت في كل صف */
+    gap: 20px; /* المسافة بين الكروت */
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    width: 90%;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f5f6fa;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, #ff6b6b, #576574);
+    transition: all 0.5s ease;
+}
+
+.card:hover:before {
+    height: 180px;
+}
+
+.card:hover .social {
+    margin-top: 50px;
+}
+
+.card:hover .pic {
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px 1px #888;
+}
+
+.card:hover .content {
+    margin-top: 90px;
+}
+
+.social {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 0;
+    margin-top: -30px;
+    text-align: center;
+    transition: margin-top 0.5s ease;
+}
+
+.social a {
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.pic {
+    position: relative;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.content {
+    margin-top: 90px;
+    text-align: center;
+    padding: 0 30px;
+    color: #2d3436;
+    transition: margin-top 0.5s ease;
+}
+
+.content .title {
+    margin-bottom: 0;
+    font-family: 'Marck Script', cursive;
+    font-size: 22px;
+}
+
+.content span {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.content p {
+    margin: 20px 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+/**************************************/
+/* استعلامات الوسائط للتجاوب */

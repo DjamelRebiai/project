@@ -1,0 +1,94 @@
+ /* تنسيق عام */
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(to right, #576574, #f1f2f6);
+    display: flex;
+    flex-direction: row;
+}
+
+/* الشريط الجانبي */
+.bar1 {
+    width: 15%;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+}
+
+.bar1 nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bar1 nav ul li {
+    margin: 20px 0;
+}
+
+.bar1 nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.bar1 nav ul li a:hover {
+    color: #e3f0e3;
+}
+
+.bar1 nav ul li a i {
+    margin-right: 10px;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    width: 85%;
+    height: 100vh;
+    background-color: #a2a8a3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* الشريط العلوي */
+.bar {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(157, 172, 172);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* المحتوى الرئيسي */
+.main {
+    width: 100%;
+    height: 80%;
+    background-color: rgb(212, 218, 206);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* التذييل */
+.footer {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(114, 25, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* تنسيق الأقسام */
+.section {
+    display: none; /* إخفاء جميع الأقسام افتراضيًا */
+}
+
+.section.active {
+    display: block; /* عرض القسم النشط فقط */
+}
